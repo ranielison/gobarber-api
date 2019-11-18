@@ -17,11 +17,11 @@ class Appointment extends Model {
 
   static associate(models) {
     this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
-    this.belongsTo(models.Provider, {
+    this.belongsTo(models.User, {
       foreignKey: 'provider_id',
       as: 'provider',
     });
   }
 }
 
-export default new Appointment();
+export default Appointment;
