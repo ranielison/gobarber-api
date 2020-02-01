@@ -28,6 +28,7 @@ routes.get('/providers', ProviderController.index);
 routes.get('/schedule', ScheduleController.index);
 
 routes.get('/notifications', NotificationController.index);
+routes.put('/notifications/:id', NotificationController.update);
 
 routes.post('/appointments', AppointmentController.store);
 routes.get('/appointments', AppointmentController.index);
