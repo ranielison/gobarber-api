@@ -64,6 +64,12 @@ class AppointmentController {
         .json({ error: 'You can only create appointmens with providers' });
     }
 
+    if (provider_id === req.userId) {
+      return res.status(401).json({
+        error: 'Provider nao podem marcar agendamentos com eles mesmos',
+      });
+    }
+
     /**
      * Check for past dates
      */
