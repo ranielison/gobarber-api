@@ -5,7 +5,6 @@ import User from '../models/User';
 
 class ScheduleController {
   async index(req, res) {
-    console.log(req.userId);
     const checkUserProvider = await User.findOne({
       where: { id: req.userId, provider: true },
     });
